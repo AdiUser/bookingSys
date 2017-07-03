@@ -1,0 +1,110 @@
+#header {
+			background: url("images/header_bg.gif") repeat-x scroll left bottom rgb(77, 140, 202);
+			background-color: rgb(77, 140, 202);
+			background-image: url("images/header_bg.gif");
+			background-repeat: repeat-x;
+			background-attachment: scroll;
+			background-position: left bottom;
+			background-clip: border-box;
+			background-origin: padding-box;
+			background-size: auto auto;
+		width: 100%;
+		height: 45px;
+		
+		}
+		#mainright {
+    width: 20%;
+    overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    float: left;
+}
+#footer {
+    background: url("images/header_bg.gif") repeat-x scroll left bottom transparent;
+        background-color: transparent;
+        background-image: url("images/header_bg.gif");
+        background-repeat: repeat-x;
+        background-attachment: scroll;
+        background-position: left bottom;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-size: auto auto;
+    height: 45px;
+    width: 100%;
+	
+}
+		.not_visited {
+			background: url('images/notvisited.png') no-repeat;
+			width: 32px;
+			height: 32px;
+			text-align:center;
+			padding-top:3px;
+		}
+		.not_answered {
+			background: url('images/visited.png') no-repeat;
+			width: 32px;
+			height: 32px;
+			text-align:center;
+			padding-top:3px;
+			padding-right:8px;
+			color:white;
+		}
+		.answered {
+			background: url('images/answered.png') no-repeat;
+			width: 32px;
+			height: 32px;
+			text-align:center;
+			padding-top:3px;
+			padding-right:8px;
+			color:white;
+		}
+		.review {
+			background: url('images/marked.png') no-repeat;
+			width: 32px;
+			height: 32px;
+			text-align:center;
+			padding-top:5px;
+			padding-right:12px;
+			color:white;
+		}
+		.review_answered {
+			background: url('images/marked_ans.png') no-repeat;
+			width: 32px;
+			height: 32px;
+			text-align:center;
+			padding-top:9px;
+			padding-right:8px;
+			color:white;
+		}
+.ntab tr td {
+	font-size: 18px;
+	color: rgb(108, 17, 142);
+	padding: 10px;
+}
+
+#res_box {
+	width:30%;
+	margin:auto;
+	padding:15px;
+	font-size:22px;
+	
+	/*background-color: rgb(242, 221, 251);*/
+	text-align:left;
+}
+
+#res_box table tr td,th {
+	font-size:22px;
+	padding:10px;
+	text-align:left;
+}
+
+#inpBox table tr td {
+		padding:10px 20px;
+		background-color:white;
+	}
+			
+#inpBox table tr td:hover {
+	color:blue;
+	cursor:pointer;
+	background-color:lightgrey;
+}

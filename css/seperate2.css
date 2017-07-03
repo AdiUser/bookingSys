@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+html, body {
+
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.img_icon {
+    padding-right: 8px;
+}
+
+.hwhy{
+        max-width: 100%;
+        height: auto;
+}
+.pad{
+    padding-right:0px !important;
+}
+a.active{
+    color : rgba(0, 0, 0, 0.7) !important;
+}
+
+.brownie {
+   background-color: rgba(202, 194, 194, 0.34) !important;
+    color : #000000 !important;
+}
+li > a:hover {
+    background-color: rgba(251, 251, 251, 0.16) !important;
+}
+
+li > a {
+    color : #fff !important;
+}
+
+.green- {
+        background-color: green !important;
+}
+
+.down_the_alter {
+    padding: 45px 10px;
+    min-height : 175px;
+}
+.divcover {
+        background-color : rgba(156, 156, 156, 0.21);
+
+}
+.bg-3 .button {
+    color: #fff;
+    border-color: #000;
+    max-height: 44px;
+}
+.tabs .tab {
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+}

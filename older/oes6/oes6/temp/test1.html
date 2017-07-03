@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Test</title>
+		<script type="text/javascript" >
+			var db;
+			function doOpen()
+			{
+				db=openDatabase('documents', '1.0', 'Local document storage', 5*1024*1024);
+			}
+			function doInsert()
+			{
+				
+				var a=document.getElementById('name').value;
+				alert(a);
+				db.transaction(function (tx) {
+					tx.executeSql("CREATE TABLE IF NOT EXISTS user (id, log);");
+					tx.executeSql("INSERT INTO user VALUES (1, 2);");
+				});
+				alert('Done');
+			}
+		</script>
+	</head>
+	<body>
+		<script>doOpen();</script>
+		<input type="text" id="name" />
+		<input type="button" value="Insert" onclick="doInsert();" />
+	</body>
+</html>

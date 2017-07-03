@@ -1,0 +1,123 @@
+/**
+  * Color
+  * Border Color
+  * Background Color  
+*/
+
+/* Color
+-------------------------------------------------------------- */
+a:hover, a:focus,
+.site-brand .header-widgets .widget i,
+#mainnav > ul > li > a:hover, 
+#mainnav > ul > li.home > a,
+.menu-extra > li > a,
+.tp-caption .title-slide, 
+.tp-caption.title-slide,
+.imagebox .box-image .box-header .box-title a:hover,
+.projects-portfolio-wrap.style1 .portfolio-content .portfolio-title a:hover,
+#header.upscrolled #mainnav > ul > li.home > a,
+#header.upscrolled #mainnav > ul > li > a:hover,
+.main-content.blog-grid .post .header-post a:hover,
+.flat-iconbox .iconbox .box-header .box-icon i,
+.counter .counter-image i,
+.pricing-table .price-column .column-container .price .prices,
+.iconlist li i,
+.flat-scheme h3,
+.page-title .breadcrumbs ul li a,
+.our-story .contents h4,
+.our-story .contents p a,
+.projects-sidebar a.link,
+.post .header-post h2.title-post a:hover,
+.post .content-post .meta-post a:hover,
+.contact-sidebar-left p a,
+#mainnav-mobi > ul > li.has-mega-menu .sub-menu.mega-menu .menu-item > a {
+	color: #0088cc;
+}
+
+/* Border Color
+-------------------------------------------------------------- */
+.flat-projects-portfolio ul.portfolio-filter li.active a,
+.flat-toggle:before,
+.tp-caption.border-bottom a,
+textarea:focus, input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="datetime"]:focus, 
+input[type="datetime-local"]:focus, 
+input[type="date"]:focus, 
+input[type="month"]:focus, 
+input[type="time"]:focus, 
+input[type="week"]:focus, 
+input[type="number"]:focus, 
+input[type="email"]:focus, 
+input[type="url"]:focus, 
+input[type="search"]:focus, 
+input[type="tel"]:focus, 
+input[type="color"]:focus,
+.pricing-table .price-column.highlight .column-container,
+.widget_recent_projects .flex-control-paging li a.flex-active,
+.projects-sidebar a.link,
+.flex-direction-nav a:hover,
+.shop-detail .products-detail .woocommerce-tabs .tabs li.active a {
+	border-color: #0088cc ;
+}
+
+.flat-tabs ul.menu-tab li:after {
+	border-top: 10px solid #0088cc;
+}
+
+.flat-figure-caption:after {
+	border-bottom-color: #0088cc;
+}
+
+.member .member-content .member-info .social-links:before {
+	border-left: 32px solid #0088cc;
+}
+
+.loader {
+	border-left: 1em solid #0088cc;
+}
+
+/* Background Color
+-------------------------------------------------------------- */
+.top,
+.button,
+#mainnav .social-links a:hover,
+.box-services .box-services-wrap h2.title-box-services:after,
+.flat-button a,
+.flat-button.style1 a:hover,
+.flat-accordion .flat-toggle h6.toggle-title:before,
+.flat-accordion .flat-toggle h6.toggle-title:after,
+#header.upscrolled #mainnav .social-links a:hover,
+.flat-tabs ul.menu-tab li.active a,
+.iconbox.color,
+.go-top,
+.flat-testimonial .owl-controls .owl-nav > div,
+input[type="submit"], 
+button[type="submit"], 
+.button,
+.widget .widget-title:after,
+.pricing-table .price-column.highlight .column-container .price,
+.pricing-table .price-column.highlight .column-container .plan,
+.footer .social-links a:hover,
+.services-sidebar .widget.widget_nav_menu .menu li a:hover,
+.widget.widget_text.style1,
+.widget_recent_projects .flex-control-paging li a.flex-active,
+.flat-figure-caption,
+.member .member-content .member-info .social-links,
+.member .member-content:after,
+.projects-related-title:after,
+.flex-direction-nav a:hover,
+.comments-area .comment-reply-title:after,
+.flat-title-section:after,
+.bg-themes,
+.error404 #main-content .content-inner .heading-404,
+.flat-search-results .search-results article .counter,
+.shopping-cart .shopping-cart-items-count {
+	background-color: #0088cc;
+}
+
+@media only screen and (max-width: 991px) {
+	.header {
+	    background-color: #0088cc;
+	}
+}

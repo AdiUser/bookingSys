@@ -1,0 +1,24 @@
+if (hour=='02'&& min == '59' && sec == '59')
+{
+	$('#faadu_message').html("All the Best! Do well.");
+	$('#faadu_message').slideDown(1000);
+	setTimeout(function(){$('#faadu_message').slideUp(1000);}, 15000);
+}
+if (hour=='01'&& min == '00' && sec == '00')
+{
+	$('#faadu_message').html(" ???? ?? ??? ??? ?? ???? ??? ??? ??? :-) ");
+	$('#faadu_message').slideDown(1000);
+	setTimeout(function(){$('#faadu_message').slideUp(1000);}, 15000);
+}
+if (hour=='00'&& min == '15' && sec == '00')
+{
+	$('#faadu_message').html(" ?? ?? ????? ????? ??? ??? ");
+	$('#faadu_message').slideDown(1000);
+	setTimeout(function(){$('#faadu_message').slideUp(1000);}, 15000);
+}
+if (hour=='00'&& min == '05' && sec == '00')
+{
+	$('#faadu_message').html(" ?????? ????? ???? ?? ?? ??? ");
+	$('#faadu_message').slideDown(1000);
+	setTimeout(function(){$('#faadu_message').slideUp(1000);}, 15000);
+}

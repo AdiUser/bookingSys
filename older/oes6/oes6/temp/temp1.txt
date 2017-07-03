@@ -1,0 +1,146 @@
+// ---------------Main Question setter and answere marker code!------------------------
+if(isset($_GET['getTest']))
+{
+    $query="select question,optiona,optionb,optionc,optiond from question where testid=$_GET[getTest] and qnid=$_GET[qno]";
+    $r=executeQuery($query);
+    
+    $row=mysql_fetch_array($r);
+    
+    $query="select stdanswer from studentquestion where stdid=$_SESSION[stdid] and testid=$_GET[getTest] and qnid=$_GET[qno]";
+    $r2=executeQuery($query);
+     echo "<form id='form-0'>";
+    echo "<textarea cols='100' rows='14' readonly style='width:96.8%;text-align:left;margin-left:2%;margin-top:2px;font-size:120%;font-weight:bold;margin-bottom:0;color:#0000ff;padding:2px 2px 2px 2px;'> $row[0] </textarea>
+                  <table border='0' width='100%' class='ntab'>";
+    if(mysql_num_rows($r2)>0)
+    {
+        $row2=mysql_fetch_array($r2);
+        
+   
+                      
+     if($row2[0]== 'optiona')  
+     {
+         echo "               <tr><td style='color:green;' >A. <input type='radio' checked='checked' name='answer' value='optiona' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[1] </td></tr> ";
+         echo "                 <tr><td >B. <input type='radio' name='answer' value='optionb' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[2] </td></tr>";
+           echo "                 <tr><td >C. <input type='radio' name='answer' value='optionc' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[3] </td></tr>";
+          echo "                 <tr><td >D. <input type='radio' name='answer' value='optiond' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[4] </td></tr>";
+         
+     }
+     if($row2[0]== 'optionb')
+      {      
+         echo "               <tr><td >A. <input type='radio' name='answer' value='optiona' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[1] </td></tr> ";
+             echo "                 <tr><td style='color:green;' >B. <input type='radio' checked='checked' name='answer' value='optionb' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[2] </td></tr>";
+      echo "                 <tr><td >C. <input type='radio' name='answer' value='optionc' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[3] </td></tr>";
+      echo "                 <tr><td >D. <input type='radio' name='answer' value='optiond' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[4] </td></tr>";
+                 
+      }
+     if($row2[0]== 'optionc')  
+     {    
+          echo "               <tr><td >A. <input type='radio' name='answer' value='optiona' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[1] </td></tr> ";
+       echo "                 <tr><td >B. <input type='radio' name='answer' value='optionb' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[2] </td></tr>";
+
+         echo "                 <tr><td style='color:green;' >C. <input type='radio' checked='checked' name='answer' value='optionc' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[3] </td></tr>";
+     echo "                 <tr><td >D. <input type='radio' name='answer' value='optiond' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[4] </td></tr>";
+ 
+     }
+     if($row2[0]== 'optiond')  
+     {   
+          echo "               <tr><td >A. <input type='radio' name='answer' value='optiona' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[1] </td></tr> ";
+       echo "                 <tr><td >B. <input type='radio' name='answer' value='optionb' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[2] </td></tr>";
+       echo "                 <tr><td >C. <input type='radio' name='answer' value='optionc' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[3] </td></tr>";
+         echo "                 <tr><td style='color:green;' >D. <input type='radio' checked='checked' name='answer' value='optiond' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[4] </td></tr>";
+         
+     }
+      echo "<tr id='putumk' ><td onclick='unmark($_SESSION[stdid],$_GET[getTest],$_GET[qno]);' style='color:blue;cursor:pointer;' >Unmark<td/></tr>";
+     
+    
+    }
+    else
+    {
+        
+         echo "               <tr><td >A. <input type='radio'  name='answer' value='optiona' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[1] </td></tr> ";
+       echo "                 <tr><td >B. <input type='radio'  name='answer' value='optionb' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[2] </td></tr>";
+       echo "                 <tr><td >C. <input type='radio'  name='answer' value='optionc' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[3] </td></tr>";
+      echo "                 <tr><td >D. <input type='radio'  name='answer' value='optiond' onclick='answer_q(".$_SESSION['stdid'].",".$_GET['getTest'].",".$_GET['qno'].",this.value);' /> $row[4] </td></tr>";
+      echo "                <tr id='putumk' ><td> &nbsp; </td></tr>";
+      
+      
+    }
+    echo"              </table>";
+    echo "</form>";
+    closedb();
+    
+}
+//-------------------------------DEFAULT--------------------------------------------
+$t=$_GET['testid'];
+    $query="select duration,totalquestions from test where testid=$t";
+    $r=executeQuery($query);
+    $row=mysql_fetch_array($r)
+    ?>
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>Prepare Test</title>
+            <link rel="stylesheet" type="text/css" href="oes.css"/>
+        </head>
+        <body aling="center" id="m_body" onreload="alert(1);" onunload="alert(2);">
+            
+            <div style="margin:100px 200px;padding:15px;text-align: center;">
+                <h1>The Timer will Start as u Press the Start Button!<br/> AlL The Best</h1>
+                <ul style="text-align: left;font-size: 24px;margin-left: 100px;" align="center">
+                    <li> Use <b>'UP'</b> and <b>'DOWN'</b> buttons to navigate through questions.</li>
+                    <li> Use <b>'A', 'B', 'C', 'D'</b> buttons to mark the right answer.</li>
+                    <li> Use <b>'U'</b> button to un-mark a question.</li>
+                    <li> All these can also be done with mouse clicks.<b>(Recommended)</b></li>
+                    <li> Once you complete the test, you cannot re-appear unless the Admin resets it.</li>
+                    <li> You session is auto-saved, incase power loss, you can resume it.</li>
+                </ul>
+                <p id="start_b"><a href="runTest.php?testid=<?php echo $_GET['testid']; ?>&dur=<?php echo $row[0]; ?>&tot=<?php echo $row[1]; ?>"><input style='padding:15px;' type='button' value='Start Test'  /></a></p>
+            </div>
+        </body>
+        
+    </html>
+
+<?php
+// -----------------------Fetch new question---------------------
+{
+                                
+                                document.getElementById('qpanel').innerHTML=result;
+                                document.getElementById('q_no').innerHTML=current;
+                                
+                                $('.sel').removeClass('sel');
+                                document.getElementById(qno+'d').className="sel";
+                                }
+//--------------------------------------------------------------
+    $total=0;
+    $r2=executeQuery("select level from subj_question where qnid_s in (select qnid_s from question where testid=$_GET[start])");
+    
+    $r3=executeQuery("select * from level where testid=$_GET[start]");
+    $row2=mysql_fetch_array($r3);
+    while($row=mysql_fetch_array($r2))
+    {
+        $total+=$row2[$row[0]];
+    }
+//------------------------------------------
+<form id="admloginform"  action="index.php" method="post" onsubmit="return validateform('admloginform');">
+           <table cellpadding="2" cellspacing="2" style="text-align:left;margin-left:15em" >
+			  <tr>
+                  <td><h2 style="font-size:24px; font-family: 'Monotype Corsiva'; font:'Monotype Corsiva'; " align="center"><b>New Administarator?</b></h2></td>
+              </tr>
+			  <tr>
+                  <td><input type="text" name="cname" placeholder="Username" style="font-size:24px; font-family: 'Monotype Corsiva'; font:'Monotype Corsiva';  height:30px; background-image:url(images/input_bg.png); " value="" size="36" onkeyup="isalphanum(this)"/></td>
+              </tr>
+              <tr>
+                  <td><input type="password" placeholder="Password" name="password" style="font-size:24px; font-family: 'Monotype Corsiva'; font:'Monotype Corsiva';  height:30px; background-image:url(images/input_bg.png); " value="" size="36" onkeyup="isalphanum(this)" /></td>
+              </tr>
+              <tr>
+                  <td><input type="password" placeholder="Re-type Password" name="repass" style="font-size:24px; font-family: 'Monotype Corsiva'; font:'Monotype Corsiva';  height:30px; background-image:url(images/input_bg.png); " value="" size="36" onkeyup="isalphanum(this)" /></td>
+              </tr>
+              <tr>
+                  <td style="text-align:right;">
+				  <input type="submit" name="admsubmitreg" value="Register" class="subbtn" />
+                  <input type="reset" name="reset" value="Reset" class="subbtn"/>
+				  </td>
+             </tr>
+            </table>
+        </form>

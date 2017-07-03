@@ -1,0 +1,225 @@
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700');
+
+
+.col-md-3{
+        padding: 0px;
+      }
+      .col-md-4{
+        padding: 0px;
+      }
+
+
+         .hover-form {
+      margin-top: 6.5%;
+    }
+    .margin {
+      margin-left : 18px;
+    }
+
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  
+}
+
+body {
+  font: 14px/1 'Josefin Sans', sans-serif;
+}
+
+h1 {
+  padding: 50px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+  
+}
+
+main {
+  min-width: 320px;
+  max-width: 840px;
+  padding: 50px;
+  margin: 0 auto;
+  background-image: url("img5.jpg");
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 2px solid #009900;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label[for*='1']:before { content: ''; }
+label[for*='2']:before { content: ''; }
+label[for*='3']:before { content: ''; }
+label[for*='4']:before { content: ''; }
+
+label:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #fff;
+  background:#d9d9d9;
+  
+  border-top: 4px solid #d9d9d9;
+  border-right: 4px solid #d9d9d9;
+  border-left: 4px solid #d9d9d9;border-top-left-radius: 0.4em;border-top-right-radius: 0.4em;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6 {
+  display: block;
+}
+.brdr{border-style: solid;
+    border: 4px solid #d9d9d9;border-radius: 0.5em;}
+
+@media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+}
+</style>
+</head>
+
+
+<main class="brdr">
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1"><img src=rafting.png> Rafting</label>
+    
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2"> <img src=camping.png> Camping</label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3"> <img src=hotel.png> Hotels</label>
+    
+  <input id="tab4" type="radio" name="tabs">
+  <label for="tab4"> <img src=trek.png> Trekking</label>
+  <input id="tab5" type="radio" name="tabs">
+  <label for="tab5"> <img src=sightseeing.png> Sightseeing</label>
+  <input id="tab6" type="radio" name="tabs">
+  <label for="tab6"> <img src=bungee.png> Bungee Jumping</label>
+    
+  <section id="content1">
+    <form class="hover-form">
+                      
+                        <div class="row">
+                          <div class="col-md-3">
+                      <div class="form-group">
+                        <label> Arrival :
+                          <input name="date" type="text" class="form-control" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+                        </label>
+                      </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label> Stretch
+                          <input type="number" name="" class="form-control">
+                        </label>
+                      </div>
+                       <div class="col-md-3">
+                        <label> No. of people
+                          <input type="number" name="" class="form-control">
+                        </label>
+
+                      </div>
+                     <div class="col-md-2">
+                        <input type="submit" name="" class="btn btn-primary low" value="Search Places">
+                        
+                      </div>
+                     
+                     </div>
+                     
+                      
+                     </div>
+                      </form>
+    
+  </section>
+    
+  <section id="content2">
+    <p>
+      Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
+    </p>
+    <p>
+      Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+    </p>
+  </section>
+    
+  <section id="content3">
+    <p>
+      Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+    </p>
+    
+  </section>
+    
+  <section id="content4">
+    <p>
+      Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
+    </p>
+    
+  </section>
+   <section id="content5">
+    <p>
+      t ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin briske
+    </p>
+    
+  </section>
+   <section id="content6">
+    <p>
+      doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tr Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank i-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
+    </p>
+    
+  </section>
+    
+</main>
